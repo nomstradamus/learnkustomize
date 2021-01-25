@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: base-ConfigMap
+data:
+  config: |
+    hello_from_base: world
+    number_from_base: 2
+    dry-run_from_base: true
+    

@@ -1,0 +1,20 @@
+resources:
+  - ../../base
+
+namespace: PRDNamespace
+commonLabels:
+    env: prd
+
+namePrefix: prd-
+
+commonAnnotations:
+  oncallPager: 1-800-prd      
+
+configMapGenerator:
+    - name: my-configmap-generator-map
+      files:
+      - map.properties
+    - name: config-map-from-literals
+      literals:
+        - JAVA_HOME_LITERAL=/literla/prop/java
+        - JAVA_TOOL_OPTIONS_LITERAL=literal:hprof

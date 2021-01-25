@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base/
+
+namespace: devnamespace
+
+namePrefix: dev-
+
+commonLabels:
+  env: dev
+  owner: dev alice
+  app: dev-bingo
+
+commonAnnotations:
+  oncallPager: dev-oncall-1212
+
+
